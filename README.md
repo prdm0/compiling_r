@@ -34,7 +34,7 @@ mv libRblas.so libRblas.so.keep
 ln -s /opt/OpenBLAS/lib/libopenblas_haswellp-r0.2.20.so libRblas.so
 ```
 
-Start a section of language **R** and do ```sessionInfo ()```. You should note something like:
+Start a section of language **R** and do ```sessionInfo()```. You should note something like:
 
 ```
 Matrix products: default
