@@ -51,7 +51,7 @@ To make use of multithreaded processing, do ```export OPENBLAS_NUM_THREADS=1``` 
 #export OMP_NUM_THREADS=8
 #USE_THREAD=0
 ```
-**NOTE**: For intel processors,```cpupower frequency-set -g performance```, can boost performance. Ler mais em https://wiki.archlinux.org/index.php/CPU_frequency_scaling.
+**NOTE**: For intel processors,```cpupower frequency-set -g performance```, can boost performance. Read more at https://wiki.archlinux.org/index.php/CPU_frequency_scaling.
 
 
 
