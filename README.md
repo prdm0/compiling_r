@@ -12,7 +12,7 @@ make -j 8
 sudo make install
 ```
 
-**Note**: **Replace 8**, with the amount of color in your CPU. This will make the compilation run faster using all the features of your CPU.
+**Note**: **Replace 8**, with the amount of cores in your CPU. This will make the compilation run faster using all the features of your CPU.
 
 After compiling **OpenBLAS**, download the **R** code. It is not necessary to compile **R** to make use of **OpenBLAS**, but compiling the language may bring some benefits that may be insignificant depending on what is being done in **R**. That way, download the source code of the language [**R**](https://cloud.r-project.org/).
 
