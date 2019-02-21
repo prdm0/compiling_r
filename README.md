@@ -51,6 +51,7 @@ To make use of multithreaded processing, do ```export OPENBLAS_NUM_THREADS=1``` 
 #export OMP_NUM_THREADS=8
 #USE_THREAD=0
 ```
+**NOTE**: For intel processors,```cpupower frequency-set -g performance```, can boost performance.
 
 
 
