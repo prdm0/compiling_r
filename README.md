@@ -4,7 +4,7 @@
 
 **Compiling R**
 
-Initially download the **R** and **OpenBLAS** (**Open Optimized BLAS Library**) source codes in[**OpenBlas**](https://www.openblas.net/). In the file directory, perform the following steps.
+Initially download the **R** and **OpenBLAS** (**Open Optimized BLAS Library**) source codes in [**OpenBlas**](https://www.openblas.net/). In the file directory, perform the following steps.
 ```
 tar -xzf OpenBLAS*
 cd OpenBLAs*
@@ -26,10 +26,7 @@ make -j 8
 make install
 ```
 
-We need to link the **R** with the file ```libopenblas_ *```, created in the process of compiling the library **OpenBLAS**. No meu caso, o arquivo é **ibopenblas_haswellp-r0.2.20.so**. Busce isso em ```/opt/OpenBLAS/lib``` ou no diretório em que foi instalado a **OpenBLAS** no seus sistema GNU/Linux. Busque também o diretório do arquivo **libRblas.so** que encontra-se no diretório de instalação da linguagem **R**. No Arch, esse diretório é ```/usr/local/lib64/R/lib```. Sendo assim, faça:
-
-
-In my case, the file is **ibopenblas_haswellp-r0.2.20.so**. Look for this in ```/opt/OpenBLAS/lib``` or in the directory where **OpenBLAS** was installed on your GNU/Linux system. Also look for the **libRblas.so** file directory found in the **R** language installation directory. In Arch, this directory is ```/usr/local/lib64/R/lib```. So, do:
+We need to link the **R** with the file ```libopenblas_ *```, created in the process of compiling the library **OpenBLAS**. In my case, the file is **ibopenblas_haswellp-r0.2.20.so**. Look for this in ```/opt/OpenBLAS/lib``` or in the directory where **OpenBLAS** was installed on your GNU/Linux system. Also look for the **libRblas.so** file directory found in the **R** language installation directory. In Arch, this directory is ```/usr/local/lib64/R/lib```. So, do:
 
 ```
 cd /usr/local/lib64/R/lib
