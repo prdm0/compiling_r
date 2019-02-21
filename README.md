@@ -1,6 +1,6 @@
 # Instructions for compiling R, OpenBLAS and linking R with OpenBLAS (GNU/Linux)
 
-**NOTE**: Disregard the lines with #.
+**Note**: Disregard the lines with #.
 
 **Compiling R**
 
