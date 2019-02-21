@@ -1,4 +1,4 @@
-# Instructions for compiling R, Openblas and R binding with OpenBLAS (GNU/Linux)
+# Instructions for compiling R, OpenBLAS and linking R with OpenBLAS (GNU/Linux)
 
 **NOTE**: Disregard the lines with #.
 
