@@ -1,2 +1,61 @@
-# compiling_r
-Instructions for compiling R, Openblas and R binding with Openblas
+# Instructions for compiling R, Openblas and R binding with Openblas (GNU/Linux)
+
+**NOTE**: Disregard the lines with #.
+
+**Compiling R**
+
+Initially download the **R** and **OpenBLAS** (**Open Optimized BLAS Library**) source codes in[**OpenBlas**](https://www.openblas.net/). In the file directory, perform the following steps.
+```
+tar -xzf OpenBLAS*
+cd OpenBLAs*
+make -j 8
+sudo make install
+```
+
+**Note**: **Replace 8**, with the amount of color in your CPU. This will make the compilation run faster using all the features of your CPU.
+
+After compiling **OpenBLAS**, download the **R** code. It is not necessary to compile **R** to make use of **OpenBLAS**, but compiling the language may bring some benefits that may be insignificant depending on what is being done in **R**. That way, download the source code of the language [**R**](https://cloud.r-project.org/).
+
+**Note**: In my operating system, Arch Linux, **OpenBLAS** was installed in the ```/opt``` directory. Search for the OpenBLAS installation directory in your GNU/Linux distribution.
+
+In the directory where the **R** was downloaded, do the following:
+
+```
+cd R-* && ./configure --enable-R-shlib --enable-threads=posix --with-lapack --with-blas="-L/opt/OpenBLAS/lib -I/opt/OpenBLAS/include -m64 -lpthread -lm"
+make -j 8
+make install
+```
+
+We need to link the **R** with the file ```libopenblas_ *```, created in the process of compiling the library **OpenBLAS**. No meu caso, o arquivo é **ibopenblas_haswellp-r0.2.20.so**. Busce isso em ```/opt/OpenBLAS/lib``` ou no diretório em que foi instalado a **OpenBLAS** no seus sistema GNU/Linux. Busque também o diretório do arquivo **libRblas.so** que encontra-se no diretório de instalação da linguagem **R**. No Arch, esse diretório é ```/usr/local/lib64/R/lib```. Sendo assim, faça:
+
+
+In my case, the file is **ibopenblas_haswellp-r0.2.20.so**. Look for this in ```/opt/OpenBLAS/lib``` or in the directory where **OpenBLAS** was installed on your GNU/Linux system. Also look for the **libRblas.so** file directory found in the **R** language installation directory. In Arch, this directory is ```/usr/local/lib64/R/lib```. So, do:
+
+```
+cd /usr/local/lib64/R/lib
+mv libRblas.so libRblas.so.keep
+ln -s /opt/OpenBLAS/lib/libopenblas_haswellp-r0.2.20.so libRblas.so
+```
+
+Start a section of language **R** and do ```sessionInfo ()```. You should note something like:
+
+```
+Matrix products: default
+BLAS/LAPACK: /opt/OpenBLAS/lib/libopenblas_haswellp-r0.2.20.so
+```
+To make use of multithreaded processing, do ```export OPENBLAS_NUM_THREADS = 1``` before starting a **R** section.
+
+**Note**: Disregard the code below. I will use it in future tests.
+
+```
+#export MKL_NUM_THREADS=1
+#export GOTO_NUM_THREADS=8
+#export OMP_NUM_THREADS=8
+#USE_THREAD=0
+```
+
+
+
+
+
+
