@@ -6,7 +6,7 @@
 
 Initially download the **R** and **OpenBLAS** (**Open Optimized BLAS Library**) source codes in [**OpenBLAS**](https://www.openblas.net/). In the file directory, perform the following steps.
 ```
-tar -xzf OpenBLAS*
+tar -zxvf OpenBLAS*
 cd OpenBLAs*
 make -j 8
 sudo make install
@@ -21,6 +21,7 @@ After compiling **OpenBLAS**, download the **R** code. It is not necessary to co
 In the directory where the **R** was downloaded, do the following:
 
 ```
+tar -zxvf R*
 cd R-* && ./configure --enable-R-shlib --enable-threads=posix --with-lapack --with-blas="-L/opt/OpenBLAS/lib -I/opt/OpenBLAS/include -m64 -lpthread -lm"
 make -j 8
 make install
