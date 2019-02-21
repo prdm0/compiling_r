@@ -4,7 +4,7 @@
 
 **Compiling R**
 
-Initially download the **R** and **OpenBLAS** (**Open Optimized BLAS Library**) source codes in [**OpenBLAS**](https://www.openblas.net/). In the file directory, perform the following steps.
+Initially download the **R** and **OpenBLAS** (**Open** Optimized **BLAS** Library) source codes in [**OpenBLAS**](https://www.openblas.net/). In the file directory, perform the following steps.
 ```
 tar -zxvf OpenBLAS*
 cd OpenBLAs*
