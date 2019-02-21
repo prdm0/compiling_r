@@ -1,4 +1,4 @@
-# Instructions for compiling R, Openblas and R binding with Openblas (GNU/Linux)
+# Instructions for compiling R, Openblas and R binding with OpenBLAS (GNU/Linux)
 
 **NOTE**: Disregard the lines with #.
 
@@ -12,11 +12,11 @@ make -j 8
 sudo make install
 ```
 
-**Note**: **Replace 8**, with the amount of cores in your CPU. This will make the compilation run faster using all the features of your CPU.
+**Note**: **Replace 8**, with the amount of cores in your CPU. This will make the compilation run faster using all the features of your CPU. To know the number of cores, do: ```nproc```.
 
 After compiling **OpenBLAS**, download the **R** code. It is not necessary to compile **R** to make use of **OpenBLAS**, but compiling the language may bring some benefits that may be insignificant depending on what is being done in **R**. That way, download the source code of the language [**R**](https://cloud.r-project.org/).
 
-**Note**: In my operating system, Arch Linux, **OpenBLAS** was installed in the ```/opt``` directory. Search for the OpenBLAS installation directory in your GNU/Linux distribution.
+**Note**: In my operating system, Arch Linux, **OpenBLAS** was installed in the ```/opt``` directory. Search for the **OpenBLAS** installation directory in your GNU/Linux distribution.
 
 In the directory where the **R** was downloaded, do the following:
 
