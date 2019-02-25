@@ -11,7 +11,15 @@ cd OpenBLAs*
 make -j $nproc
 sudo make install
 ```
+or
 
+```
+git clone https://github.com/xianyi/OpenBLAS.git
+cd OpenBLAS*
+make -j $nproc
+sudo make install
+
+```
 **Note**: This will make the compilation run faster using all the features of your CPU. To know the number of cores, do: ```nproc```.
 
 After compiling **OpenBLAS**, download the **R** code. It is not necessary to compile **R** to make use of **OpenBLAS**, but compiling the language may bring some benefits that may be insignificant depending on what is being done in **R**. That way, download the source code of the language [**R**](https://cloud.r-project.org/).
