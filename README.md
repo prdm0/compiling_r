@@ -58,6 +58,7 @@ Para quem faz uso de códigos **C++** em **R** utilizando a biblioteca [**Rcpp**
 ```
 tar -xvf armadillo*
 cd armadillo*
+./configure -DCMAKE_PREFIX_PATH=/opt/OpenBLAS/lib/
 cmake . -DCMAKE_PREFIX_PATH=/opt/OpenBLAS/lib/
 ```
 **Note**: Maiores detalhes a respeito da compilação da biblioteca **Armadillo** poderá ser encontrado em https://gitlab.com/conradsnicta/armadillo-code.
