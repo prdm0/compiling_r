@@ -47,7 +47,7 @@ In the directory where the **R** was downloaded, do the following:
 
 ```
 tar -zxvf R*
-cd R-* && ./configure --enable-R-shlib --enable-threads=posix --with-lapack --with-blas="-L/opt/OpenBLAS/lib -I/opt/OpenBLAS/include -m64 -lpthread -lm"
+cd R-* && ./configure --enable-R-shlib --enable-threads=posix --with-blas="-lopenblas -L/opt/OpenBLAS/lib -I/opt/OpenBLAS/include -m64 -lpthread -lm"
 make -j $nproc
 sudo make install
 ```
