@@ -24,7 +24,7 @@ In the directory where the **R** was downloaded, do the following:
 tar -zxvf R*
 cd R-* && ./configure --enable-R-shlib --enable-threads=posix --with-lapack --with-blas="-L/opt/OpenBLAS/lib -I/opt/OpenBLAS/include -m64 -lpthread -lm"
 make -j $nproc
-make install
+sudo make install
 ```
 
 We need to link the **R** with the file ```libopenblas_*```, created in the process of compiling the library **OpenBLAS**. In my case, the file is **ibopenblas_haswellp-r0.2.20.so**. Look for this in ```/opt/OpenBLAS/lib``` or in the directory where **OpenBLAS** was installed on your GNU/Linux system. Also look for the **libRblas.so** file directory found in the **R** language installation directory. In Arch, this directory is ```/usr/local/lib64/R/lib```. So, do:
