@@ -54,7 +54,17 @@ make -j $nproc
 sudo make install
 ```
 
-We need to link the **R** with the file ```libopenblas_*```, created in the process of compiling the library **OpenBLAS**. In my case, the file is **ibopenblas_haswellp-r0.2.20.so**. Look for this in ```/opt/OpenBLAS/lib``` or in the directory where **OpenBLAS** was installed on your GNU/Linux system. Also look for the **libRblas.so** file directory found in the **R** language installation directory. In Arch, this directory is ```/usr/local/lib64/R/lib```. So, do:
+Muito provavelmente a biblioteca OpenBLAS estará vinculada ao **R**. Pra saber, no **R** corra o código ```sessionInfo()```. Algo parecido com a saída abaixo deverá aparecer:
+
+```
+Matrix products: default
+BLAS/LAPACK: /opt/OpenBLAS/lib/libopenblas_haswellp-r0.3.6.dev.so
+```
+
+Caso a linkagem não ocorra, siga o passos destacados no código logo abaixo.
+
+
+**Note**:  We need to link the **R** with the file ```libopenblas_*```, created in the process of compiling the library **OpenBLAS**. In my case, the file is **ibopenblas_haswellp-r0.2.20.so**. Look for this in ```/opt/OpenBLAS/lib``` or in the directory where **OpenBLAS** was installed on your GNU/Linux system. Also look for the **libRblas.so** file directory found in the **R** language installation directory. In Arch, this directory is ```/usr/local/lib64/R/lib```. 
 
 ```
 cd /usr/local/lib64/R/lib
