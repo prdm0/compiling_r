@@ -2,7 +2,7 @@
 
 **Note**: Disregard the lines with #.
 
-**Compiling R**
+**Compiling OpenBLAs**
 
 Initially download the **R** and **OpenBLAS** (**Open** Optimized **BLAS** Library) source codes in [**OpenBLAS**](https://www.openblas.net/). In the file directory, perform the following steps.
 ```
@@ -21,6 +21,23 @@ sudo make install
 
 ```
 **Note**: This will make the compilation run faster using all the features of your CPU. To know the number of cores, do: ```nproc```.
+
+
+**Compiling Armadillo C++  with OpenBLAS**
+
+Para quem faz uso de códigos **C++** em **R** utilizando a biblioteca [**Rcpp**](http://www.rcpp.org/), configurar o [**Armadillo**](http://arma.sourceforge.net/) com a biblioteca **OpenBLAS** poderá ser algo proveitoso. 
+
+```
+tar -xvf armadillo*
+cd armadillo*
+./configure -DCMAKE_PREFIX_PATH=/opt/OpenBLAS/lib/
+cmake . -DCMAKE_PREFIX_PATH=/opt/OpenBLAS/lib/
+make -j $nproc
+sudo make install
+```
+**Note**: Maiores detalhes a respeito da compilação da biblioteca **Armadillo** poderá ser encontrado em https://gitlab.com/conradsnicta/armadillo-code.
+
+**Compiling R with OpenBLAS**
 
 After compiling **OpenBLAS**, download the **R** code. It is not necessary to compile **R** to make use of **OpenBLAS**, but compiling the language may bring some benefits that may be insignificant depending on what is being done in **R**. That way, download the source code of the language [**R**](https://cloud.r-project.org/).
 
@@ -50,21 +67,6 @@ Matrix products: default
 BLAS/LAPACK: /opt/OpenBLAS/lib/libopenblas_haswellp-r0.2.20.so
 ```
 To make use of multithreaded processing, do ```export OPENBLAS_NUM_THREADS=1``` before starting a **R** section.
-
-**Armadillo C++**
-
-Para quem faz uso de códigos **C++** em **R** utilizando a biblioteca [**Rcpp**](http://www.rcpp.org/), configurar o [**Armadillo**](http://arma.sourceforge.net/) com a biblioteca **OpenBLAS** poderá ser algo proveitoso. 
-
-```
-tar -xvf armadillo*
-cd armadillo*
-./configure -DCMAKE_PREFIX_PATH=/opt/OpenBLAS/lib/
-cmake . -DCMAKE_PREFIX_PATH=/opt/OpenBLAS/lib/
-make -j $nproc
-sudo make install
-```
-**Note**: Maiores detalhes a respeito da compilação da biblioteca **Armadillo** poderá ser encontrado em https://gitlab.com/conradsnicta/armadillo-code.
-
 
 **Note**: Disregard the code below. I will use it in future tests.
 
