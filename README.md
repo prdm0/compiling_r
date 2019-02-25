@@ -66,7 +66,7 @@ Start a section of language **R** and do ```sessionInfo()```. You should note so
 
 ```
 Matrix products: default
-BLAS/LAPACK: /opt/OpenBLAS/lib/libopenblas_haswellp-r0.2.20.so
+BLAS/LAPACK: /opt/OpenBLAS/lib/libopenblas_haswellp-r0.3.6.dev.so
 ```
 To make use of multithreaded processing, do ```export OPENBLAS_NUM_THREADS=1``` before starting a **R** section.
 
