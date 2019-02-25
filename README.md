@@ -59,6 +59,8 @@ Para quem faz uso de códigos **C++** em **R** utilizando a biblioteca [**Rcpp**
 tar -xvf armadillo*
 cd armadillo*
 ```
+**Note**: Maiores detalhes a respeito da compilação da biblioteca **Armadillo** poderá ser encontrado em https://gitlab.com/conradsnicta/armadillo-code.
+
 
 **Note**: Disregard the code below. I will use it in future tests.
 
