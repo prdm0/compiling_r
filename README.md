@@ -55,6 +55,11 @@ To make use of multithreaded processing, do ```export OPENBLAS_NUM_THREADS=1``` 
 
 Para quem faz uso de códigos **C++** em **R** utilizando a biblioteca [**Rcpp**](http://www.rcpp.org/), configurar o [**Armadillo**](http://arma.sourceforge.net/) com a biblioteca **OpenBLAS** poderá ser algo proveitoso. 
 
+```
+git clone git@gitlab.com:conradsnicta/armadillo-code.git
+cd Armadillo*
+```
+
 **Note**: Disregard the code below. I will use it in future tests.
 
 ```
