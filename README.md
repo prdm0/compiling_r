@@ -77,6 +77,12 @@ BLAS/LAPACK: /opt/OpenBLAS/lib/libopenblas_haswellp-r0.3.6.dev.so
 ```
 To make use of multithreaded processing, do ```export OPENBLAS_NUM_THREADS=1``` before starting a [**R**](https://cloud.r-project.org/) section.
 
+```
+export OPENBLAS_NUM_THREADS=1
+export GOTO_NUM_THREADS=1
+export OMP_NUM_THREADS=1
+```
+
 **NOTE**: For intel processors,```sudo cpupower frequency-set -g performance```, can boost performance. Read more at https://wiki.archlinux.org/index.php/CPU_frequency_scaling.
 
 
