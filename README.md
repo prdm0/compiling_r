@@ -8,11 +8,11 @@ Initially download the **R** and **OpenBLAS** (**Open** Optimized **BLAS** Libra
 ```
 tar -zxvf OpenBLAS*
 cd OpenBLAs*
-make -j 8
+make -j nproc
 sudo make install
 ```
 
-**Note**: **Replace 8**, with the amount of cores in your CPU. This will make the compilation run faster using all the features of your CPU. To know the number of cores, do: ```nproc```.
+**Note**: This will make the compilation run faster using all the features of your CPU. To know the number of cores, do: ```nproc```.
 
 After compiling **OpenBLAS**, download the **R** code. It is not necessary to compile **R** to make use of **OpenBLAS**, but compiling the language may bring some benefits that may be insignificant depending on what is being done in **R**. That way, download the source code of the language [**R**](https://cloud.r-project.org/).
 
@@ -23,7 +23,7 @@ In the directory where the **R** was downloaded, do the following:
 ```
 tar -zxvf R*
 cd R-* && ./configure --enable-R-shlib --enable-threads=posix --with-lapack --with-blas="-L/opt/OpenBLAS/lib -I/opt/OpenBLAS/include -m64 -lpthread -lm"
-make -j 8
+make -j nproc
 make install
 ```
 
