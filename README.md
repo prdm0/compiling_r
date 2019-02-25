@@ -1,10 +1,9 @@
 # Instructions for compiling R, OpenBLAS and linking R with OpenBLAS (GNU/Linux)
 
-**Note**: Disregard the lines with #.
 
 **Compiling OpenBLAS**
 
-Initially download the **R** and **OpenBLAS** (**Open** Optimized **BLAS** Library) source codes in [**OpenBLAS**](https://www.openblas.net/). In the file directory, perform the following steps.
+Initially download the **R** and [**OpenBLAS**](https://www.openblas.net/) (**Open** Optimized **BLAS** Library) source codes in [**OpenBLAS**](https://www.openblas.net/). In the file directory, perform the following steps.
 ```
 tar -zxvf OpenBLAS*
 cd OpenBLAs*
@@ -27,7 +26,7 @@ export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
 
 **Compiling Armadillo C++  with OpenBLAS**
 
-Para quem faz uso de códigos **C++** em **R** utilizando a biblioteca [**Rcpp**](http://www.rcpp.org/), configurar o [**Armadillo**](http://arma.sourceforge.net/) com a biblioteca **OpenBLAS** poderá ser algo proveitoso. 
+Para quem faz uso de códigos **C++** em **R** utilizando a biblioteca [**Rcpp**](http://www.rcpp.org/), configurar o [**Armadillo**](http://arma.sourceforge.net/) com a biblioteca [**OpenBLAS**](https://www.openblas.net/) poderá ser algo proveitoso. 
 
 ```
 tar -xvf armadillo*
@@ -41,9 +40,9 @@ sudo make install
 
 **Compiling R with OpenBLAS**
 
-After compiling **OpenBLAS**, download the **R** code. It is not necessary to compile **R** to make use of **OpenBLAS**, but compiling the language may bring some benefits that may be insignificant depending on what is being done in **R**. That way, download the source code of the language [**R**](https://cloud.r-project.org/).
+After compiling [**OpenBLAS**](https://www.openblas.net/), download the **R** code. It is not necessary to compile **R** to make use of [**OpenBLAS**](https://www.openblas.net/), but compiling the language may bring some benefits that may be insignificant depending on what is being done in **R**. That way, download the source code of the language [**R**](https://cloud.r-project.org/).
 
-**Note**: In my operating system, Arch Linux, **OpenBLAS** was installed in the ```/opt``` directory. Search for the **OpenBLAS** installation directory in your GNU/Linux distribution.
+**Note**: In my operating system, Arch Linux, [**OpenBLAS**](https://www.openblas.net/) was installed in the ```/opt``` directory. Search for the [**OpenBLAS**](https://www.openblas.net/) installation directory in your GNU/Linux distribution.
 
 In the directory where the **R** was downloaded, do the following:
 
@@ -54,7 +53,7 @@ make -j $nproc
 sudo make install
 ```
 
-Most likely the **OpenBLAS** library will be bound to **R**. To check, run  in the **R** the ```sessionInfo ()``` code. Something like the output below should appear:
+Most likely the [**OpenBLAS**](https://www.openblas.net/) library will be bound to **R**. To check, run  in the **R** the ```sessionInfo ()``` code. Something like the output below should appear:
 
 ```
 Matrix products: default
@@ -62,7 +61,7 @@ BLAS/LAPACK: /opt/OpenBLAS/lib/libopenblas_haswellp-r0.3.6.dev.so
 ```
 If linking does not occur, follow the steps outlined in the code below.
 
-We need to link the **R** with the file ```libopenblas_*```, created in the process of compiling the library **OpenBLAS**. In my case, the file is **ibopenblas_haswellp-r0.2.20.so**. Look for this in ```/opt/OpenBLAS/lib``` or in the directory where **OpenBLAS** was installed on your GNU/Linux system. Also look for the **libRblas.so** file directory found in the **R** language installation directory. In Arch, this directory is ```/usr/local/lib64/R/lib```. 
+We need to link the **R** with the file ```libopenblas_*```, created in the process of compiling the library [**OpenBLAS**](https://www.openblas.net/). In my case, the file is **ibopenblas_haswellp-r0.2.20.so**. Look for this in ```/opt/OpenBLAS/lib``` or in the directory where [**OpenBLAS**](https://www.openblas.net/) was installed on your GNU/Linux system. Also look for the **libRblas.so** file directory found in the **R** language installation directory. In Arch, this directory is ```/usr/local/lib64/R/lib```. 
 
 ```
 cd /usr/local/lib64/R/lib
