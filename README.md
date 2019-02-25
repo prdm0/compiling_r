@@ -8,7 +8,7 @@ Initially download the **R** and **OpenBLAS** (**Open** Optimized **BLAS** Libra
 ```
 tar -zxvf OpenBLAS*
 cd OpenBLAs*
-make -j nproc
+make -j $nproc
 sudo make install
 ```
 
@@ -23,7 +23,7 @@ In the directory where the **R** was downloaded, do the following:
 ```
 tar -zxvf R*
 cd R-* && ./configure --enable-R-shlib --enable-threads=posix --with-lapack --with-blas="-L/opt/OpenBLAS/lib -I/opt/OpenBLAS/include -m64 -lpthread -lm"
-make -j nproc
+make -j $nproc
 make install
 ```
 
