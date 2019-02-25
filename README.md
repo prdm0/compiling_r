@@ -10,6 +10,7 @@ tar -zxvf OpenBLAS*
 cd OpenBLAs*
 make -j $nproc
 sudo make install
+export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
 ```
 or
 
