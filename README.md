@@ -60,6 +60,8 @@ tar -xvf armadillo*
 cd armadillo*
 ./configure -DCMAKE_PREFIX_PATH=/opt/OpenBLAS/lib/
 cmake . -DCMAKE_PREFIX_PATH=/opt/OpenBLAS/lib/
+make -j $nproc
+sudo make install
 ```
 **Note**: Maiores detalhes a respeito da compilação da biblioteca **Armadillo** poderá ser encontrado em https://gitlab.com/conradsnicta/armadillo-code.
 
