@@ -2,7 +2,7 @@
 
 **Note**: Disregard the lines with #.
 
-**Compiling OpenBLAs**
+**Compiling OpenBLAS**
 
 Initially download the **R** and **OpenBLAS** (**Open** Optimized **BLAS** Library) source codes in [**OpenBLAS**](https://www.openblas.net/). In the file directory, perform the following steps.
 ```
