@@ -26,7 +26,7 @@ export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
 
 **Compiling Armadillo C++  with OpenBLAS**
 
-For those who use **C++** codes in [**R**] (https://cloud.r-project.org/) using the [**Rcpp**] library (http: // www. rcpp.org/), configure the [**Armadillo**] (http://arma.sourceforge.net/) with the library [**OpenBLAS**] (https://www.openblas.net/) be something fruitful.
+For those who use **C++** codes in [**R**](https://cloud.r-project.org/) using the library [**Rcpp**](http://www.rcpp.org/), configure the [**Armadillo**](http://arma.sourceforge.net/) with the library [**OpenBLAS**] (https://www.openblas.net/) be something fruitful.
 
 ```
 tar -xvf armadillo*
