@@ -26,7 +26,7 @@ export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
 
 **Compiling Armadillo C++  with OpenBLAS**
 
-Para quem faz uso de códigos **C++** em [**R**](https://cloud.r-project.org/) utilizando a biblioteca [**Rcpp**](http://www.rcpp.org/), configurar o [**Armadillo**](http://arma.sourceforge.net/) com a biblioteca [**OpenBLAS**](https://www.openblas.net/) poderá ser algo proveitoso. 
+For those who use **C++** codes in [**R**] (https://cloud.r-project.org/) using the [**Rcpp**] library (http: // www. rcpp.org/), configure the [**Armadillo**] (http://arma.sourceforge.net/) with the library [**OpenBLAS**] (https://www.openblas.net/) be something fruitful.
 
 ```
 tar -xvf armadillo*
@@ -36,7 +36,7 @@ cmake . -DCMAKE_PREFIX_PATH=/opt/OpenBLAS/lib/
 make -j $nproc
 sudo make install
 ```
-**Note**: Maiores detalhes a respeito da compilação da biblioteca [**Armadillo**](http://arma.sourceforge.net/) poderá ser encontrado em https://gitlab.com/conradsnicta/armadillo-code.
+**Note**: Further details regarding the compilation of the library [**Armadillo**](http://arma.sourceforge.net/) can be found at https://gitlab.com/conradsnicta/armadillo-code.
 
 **Compiling R with OpenBLAS**
 
