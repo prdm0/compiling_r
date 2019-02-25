@@ -54,17 +54,15 @@ make -j $nproc
 sudo make install
 ```
 
-Muito provavelmente a biblioteca OpenBLAS estará vinculada ao **R**. Pra saber, no **R** corra o código ```sessionInfo()```. Algo parecido com a saída abaixo deverá aparecer:
+Most likely the **OpenBLAS** library will be bound to **R**. To check, run  in the **R** the ```sessionInfo ()``` code. Something like the output below should appear:
 
 ```
 Matrix products: default
 BLAS/LAPACK: /opt/OpenBLAS/lib/libopenblas_haswellp-r0.3.6.dev.so
 ```
+If linking does not occur, follow the steps outlined in the code below.
 
-Caso a linkagem não ocorra, siga o passos destacados no código logo abaixo.
-
-
-**Note**:  We need to link the **R** with the file ```libopenblas_*```, created in the process of compiling the library **OpenBLAS**. In my case, the file is **ibopenblas_haswellp-r0.2.20.so**. Look for this in ```/opt/OpenBLAS/lib``` or in the directory where **OpenBLAS** was installed on your GNU/Linux system. Also look for the **libRblas.so** file directory found in the **R** language installation directory. In Arch, this directory is ```/usr/local/lib64/R/lib```. 
+We need to link the **R** with the file ```libopenblas_*```, created in the process of compiling the library **OpenBLAS**. In my case, the file is **ibopenblas_haswellp-r0.2.20.so**. Look for this in ```/opt/OpenBLAS/lib``` or in the directory where **OpenBLAS** was installed on your GNU/Linux system. Also look for the **libRblas.so** file directory found in the **R** language installation directory. In Arch, this directory is ```/usr/local/lib64/R/lib```. 
 
 ```
 cd /usr/local/lib64/R/lib
@@ -80,14 +78,6 @@ BLAS/LAPACK: /opt/OpenBLAS/lib/libopenblas_haswellp-r0.3.6.dev.so
 ```
 To make use of multithreaded processing, do ```export OPENBLAS_NUM_THREADS=1``` before starting a **R** section.
 
-**Note**: Disregard the code below. I will use it in future tests.
-
-```
-#export MKL_NUM_THREADS=1
-#export GOTO_NUM_THREADS=8
-#export OMP_NUM_THREADS=8
-#USE_THREAD=0
-```
 **NOTE**: For intel processors,```sudo cpupower frequency-set -g performance```, can boost performance. Read more at https://wiki.archlinux.org/index.php/CPU_frequency_scaling.
 
 
