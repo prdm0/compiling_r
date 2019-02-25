@@ -43,6 +43,10 @@ BLAS/LAPACK: /opt/OpenBLAS/lib/libopenblas_haswellp-r0.2.20.so
 ```
 To make use of multithreaded processing, do ```export OPENBLAS_NUM_THREADS=1``` before starting a **R** section.
 
+**Armadillo C++**
+
+Para quem faz uso de códigos **C++** em **R** utilizando a biblioteca [**Rcpp**](http://www.rcpp.org/), configurar o [**Armadillo**](http://arma.sourceforge.net/) com a biblioteca **OpenBLAS** poderá ser algo proveitoso. 
+
 **Note**: Disregard the code below. I will use it in future tests.
 
 ```
