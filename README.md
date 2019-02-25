@@ -53,7 +53,7 @@ make -j $nproc
 sudo make install
 ```
 
-Most likely the [**OpenBLAS**](https://www.openblas.net/) library will be bound to [**R**](https://cloud.r-project.org/). To check, run  in the [**R**](https://cloud.r-project.org/) the ```sessionInfo ()``` code. Something like the output below should appear:
+Most likely the [**OpenBLAS**](https://www.openblas.net/) library will be bound to [**R**](https://cloud.r-project.org/). To check, run  in the [**R**](https://cloud.r-project.org/) the ```sessionInfo()``` code. Something like the output below should appear:
 
 ```
 Matrix products: default
