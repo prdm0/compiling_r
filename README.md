@@ -1,6 +1,6 @@
 # Instructions for compiling R, OpenBLAS and linking R with OpenBLAS (GNU/Linux)
 
-**DEPENDENCES**: make, gcc, gcc-fortran and tk.
+**DEPENDENCES**: make, cmake, gcc, gcc-fortran and tk.
 
 **Compiling OpenBLAS**
 
