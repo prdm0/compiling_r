@@ -8,7 +8,7 @@ Initially download the [**R**](https://cloud.r-project.org/) and [**OpenBLAS**](
 ```
 tar -zxvf OpenBLAS*
 cd OpenBLAs*
-make -j $nproc
+make -j $(nproc)
 sudo make install
 export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
 ```
@@ -17,7 +17,7 @@ or
 ```
 git clone https://github.com/xianyi/OpenBLAS.git
 cd OpenBLAS*
-make -j $nproc
+make -j $(nproc)
 sudo make install
 export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
 
@@ -34,7 +34,7 @@ tar -xvf armadillo*
 cd armadillo*
 ./configure -DCMAKE_PREFIX_PATH=/opt/OpenBLAS/lib/
 cmake . -DCMAKE_PREFIX_PATH=/opt/OpenBLAS/lib/
-make -j $nproc
+make -j $(nproc)
 sudo make install
 ```
 **Note**: Further details regarding the compilation of the library [**Armadillo**](http://arma.sourceforge.net/) can be found at https://gitlab.com/conradsnicta/armadillo-code.
@@ -50,7 +50,7 @@ In the directory where the [**R**](https://cloud.r-project.org/) was downloaded,
 ```
 tar -zxvf R*
 cd R-* && ./configure --enable-R-shlib --enable-threads=posix --with-blas="-lopenblas -L/opt/OpenBLAS/lib -I/opt/OpenBLAS/include -m64 -lpthread -lm"
-make -j $nproc
+make -j $(nproc)
 sudo make install
 ```
 
