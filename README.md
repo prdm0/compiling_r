@@ -19,6 +19,7 @@ or
 ```
 git clone https://github.com/xianyi/OpenBLAS.git
 cd OpenBLAS*
+git checkout v0.3.5
 make -j $(nproc)
 sudo make install
 export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
@@ -69,7 +70,7 @@ We need to link the [**R**](https://cloud.r-project.org/) with the file ```libop
 ```
 cd /usr/local/lib64/R/lib
 mv libRblas.so libRblas.so.keep
-ln -s /opt/OpenBLAS/lib/libopenblas_haswellp-r0.2.20.so libRblas.so
+ln -s /opt/OpenBLAS/lib/libopenblas_haswellp-r0.3.5.so libRblas.so
 ```
 
 Start a section of language [**R**](https://cloud.r-project.org/) and do ```sessionInfo()```. You should note something like:
