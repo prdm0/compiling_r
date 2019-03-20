@@ -24,7 +24,7 @@ sudo make install
 export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
 
 ```
-**Note**: This will make the compilation run faster using all the features of your CPU. To know the number of cores, do: ```nproc```.
+**Note**: This will make the compilation run faster using all the features of your CPU. To know the number of cores, do: ```nproc```. The default installation directory is `/opt/OpenBLAS`.
 
 
 ## Compiling Armadillo C++  with OpenBLAS
