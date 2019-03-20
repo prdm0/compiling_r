@@ -64,7 +64,7 @@ BLAS/LAPACK: /opt/OpenBLAS/lib/libopenblas_haswellp-r0.3.6.dev.so
 ```
 If linking does not occur, follow the steps outlined in the code below.
 
-We need to link the [**R**](https://cloud.r-project.org/) with the file ```libopenblas_*```, created in the process of compiling the library [**OpenBLAS**](https://www.openblas.net/). In my case, the file is **libopenblas_haswellp-r0.2.20.so**. Look for this in ```/opt/OpenBLAS/lib``` or in the directory where [**OpenBLAS**](https://www.openblas.net/) was installed on your GNU/Linux system. Also look for the **libRblas.so** file directory found in the [**R**](https://cloud.r-project.org/) language installation directory. In Arch, this directory is ```/usr/local/lib64/R/lib```. 
+We need to link the [**R**](https://cloud.r-project.org/) with the file ```libopenblas_*```, created in the process of compiling the library [**OpenBLAS**](https://www.openblas.net/). In my case, the file is **libopenblas_haswellp-r0.3.5.so**. Look for this in ```/opt/OpenBLAS/lib``` or in the directory where [**OpenBLAS**](https://www.openblas.net/) was installed on your GNU/Linux system. Also look for the **libRblas.so** file directory found in the [**R**](https://cloud.r-project.org/) language installation directory. In Arch, this directory is ```/usr/local/lib64/R/lib```. 
 
 ```
 cd /usr/local/lib64/R/lib
