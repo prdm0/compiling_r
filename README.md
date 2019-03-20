@@ -2,7 +2,9 @@
 
 **DEPENDENCES**: make, cmake, gcc, gcc-fortran and tk.
 
-**Compiling OpenBLAS**
+**Important**: I'll be at all times assuming that the project [**Julia**](https://julialang.org/) has been cloned into the directory `~/Downloads`. Also, I will consider the `/opt` directory as the installation directory for the [**OpenBLAS**](https://www.openblas.net/) library and of the [**Julia**](https://julialang.org/) language. You can choose a directory of your choice.
+
+## Compiling OpenBLAS
 
 Initially download the [**R**](https://cloud.r-project.org/) and [**OpenBLAS**](https://www.openblas.net/) (**Open** Optimized **BLAS** Library) source codes in [**OpenBLAS**](https://www.openblas.net/). In the file directory, perform the following steps.
 ```
@@ -25,7 +27,7 @@ export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
 **Note**: This will make the compilation run faster using all the features of your CPU. To know the number of cores, do: ```nproc```.
 
 
-**Compiling Armadillo C++  with OpenBLAS**
+## Compiling Armadillo C++  with OpenBLAS
 
 For those who use **C++** codes in [**R**](https://cloud.r-project.org/) using the library [**Rcpp**](http://www.rcpp.org/), configure the [**Armadillo**](http://arma.sourceforge.net/) with the library [**OpenBLAS**](https://www.openblas.net/) be something fruitful.
 
@@ -39,7 +41,7 @@ sudo make install
 ```
 **Note**: Further details regarding the compilation of the library [**Armadillo**](http://arma.sourceforge.net/) can be found at https://gitlab.com/conradsnicta/armadillo-code.
 
-**Compiling R with OpenBLAS**
+## Compiling R with OpenBLAS
 
 After compiling [**OpenBLAS**](https://www.openblas.net/), download the [**R**](https://cloud.r-project.org/) code. It is not necessary to compile [**R**](https://cloud.r-project.org/) to make use of [**OpenBLAS**](https://www.openblas.net/), but compiling the language may bring some benefits that may be insignificant depending on what is being done in [**R**](https://cloud.r-project.org/). That way, download the source code of the language [**R**](https://cloud.r-project.org/).
 
