@@ -61,7 +61,7 @@ Most likely the [**OpenBLAS**](https://www.openblas.net/) library will be bound 
 
 ```
 Matrix products: default
-BLAS/LAPACK: /opt/OpenBLAS/lib/libopenblas_haswellp-r0.3.6.dev.so
+BLAS/LAPACK: /opt/OpenBLAS/lib/libopenblas_haswellp-r0.3.5.so
 ```
 If linking does not occur, follow the steps outlined in the code below.
 
@@ -77,7 +77,7 @@ Start a section of language [**R**](https://cloud.r-project.org/) and do ```sess
 
 ```
 Matrix products: default
-BLAS/LAPACK: /opt/OpenBLAS/lib/libopenblas_haswellp-r0.3.6.dev.so
+BLAS/LAPACK: /opt/OpenBLAS/lib/libopenblas_haswellp-r0.3.5.so
 ```
 To make use of multithreaded processing, do ```export OPENBLAS_NUM_THREADS=1``` before starting a [**R**](https://cloud.r-project.org/) section.
 
