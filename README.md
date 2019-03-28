@@ -81,13 +81,13 @@ Matrix products: default
 BLAS/LAPACK: /opt/OpenBLAS/lib/libopenblas_haswellp-r0.3.5.so
 ```
 
-The code below will make the R code callable anywhere:
+## Installing RStudio and binding to compiled R in (Arch Linux)
 
 ```
+yaourt -S rstudio-desktop-bin
 sudo ln -sf /opt/R/3.5.3/bin/R /bin/R
 sudo ln -sf /opt/R/3.5.3/bin/R /bin/Rscript 
 ```
-
 
 To make use of multithreaded processing, do ```export OPENBLAS_NUM_THREADS=1``` before starting a [**R**](https://cloud.r-project.org/) section.
 
