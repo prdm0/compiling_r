@@ -89,6 +89,17 @@ sudo ln -sf /opt/R/3.5.3/bin/R /bin/R
 sudo ln -sf /opt/R/3.5.3/bin/R /bin/Rscript 
 ```
 
+# For distributions based on Arch Linux.
+
+All steps, for distributions based on Arch Linux, could be summarized in:
+
+```
+yaourt -S openblas-lapack --noconfirm
+sudo pacman -S r
+```
+Installing [**R**](https://cloud.r-project.org/) from the form just above is much simpler. However, the advantage of compiling and installing [**R**](https://cloud.r-project.org/) in the `/ opt` directory is that we can have several configured versions of the language.
+
+
 To make use of multithreaded processing, do ```export OPENBLAS_NUM_THREADS=1``` before starting a [**R**](https://cloud.r-project.org/) section.
 
 ```
