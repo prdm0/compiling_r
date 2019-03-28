@@ -70,7 +70,7 @@ We need to link the [**R**](https://cloud.r-project.org/) with the file ```libop
 
 ```
 cd /usr/local/lib64/R/lib
-mv libRblas.so libRblas.so.keep
+sudo mv libRblas.so libRblas.so.keep
 ln -s /opt/OpenBLAS/lib/libopenblas_haswellp-r0.3.5.so libRblas.so
 ```
 
