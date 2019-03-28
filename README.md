@@ -10,7 +10,7 @@ Initially download the [**R**](https://cloud.r-project.org/) and [**OpenBLAS**](
 ```
 tar -zxvf OpenBLAS*
 cd OpenBLAs*
-make -j $(nproc)
+make DYNAMIC_ARCH=1 -j $(nproc)
 sudo make install
 export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
 ```
@@ -21,7 +21,7 @@ git clone https://github.com/xianyi/OpenBLAS.git
 cd OpenBLAS*
 git checkout v0.3.5
 make -j $(nproc)
-sudo make install
+sudo DYNAMIC_ARCH=1 make install
 export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
 
 ```
