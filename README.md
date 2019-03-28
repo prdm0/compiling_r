@@ -12,7 +12,6 @@ tar -zxvf OpenBLAS*
 cd OpenBLAs*
 make -j $(nproc)
 sudo make install
-export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
 ```
 or
 
@@ -22,8 +21,6 @@ cd OpenBLAS*
 git checkout v0.3.5
 make -j $(nproc)
 sudo make install
-export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
-
 ```
 **Note**: This will make the compilation run faster using all the features of your CPU. To know the number of cores, do: ```nproc```. The default installation directory is `/opt/OpenBLAS`.
 
@@ -35,6 +32,7 @@ For those who use **C++** codes in [**R**](https://cloud.r-project.org/) using t
 ```
 tar -xvf armadillo*
 cd armadillo*
+export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
 ./configure -DCMAKE_PREFIX_PATH=/opt/OpenBLAS/lib/
 cmake . -DCMAKE_PREFIX_PATH=/opt/OpenBLAS/lib/
 make -j $(nproc)
@@ -53,6 +51,7 @@ In the directory where the [**R**](https://cloud.r-project.org/) was downloaded,
 ```
 tar -zxvf R*
 cd R-* 
+export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
 ./configure --enable-R-shlib --enable-threads=posix --with-blas="-lopenblas -L/opt/OpenBLAS/lib -I/opt/OpenBLAS/include -m64 -lpthread -lm"
 make -j $(nproc)
 sudo make install PREFIX=/opt/R
