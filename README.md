@@ -56,7 +56,7 @@ export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
 make -j $(nproc)
 sudo make install
 ```
-**Note**: The language [**R**](https://cloud.r-project.org/) will be configured and installed in the `/opt/R/3.5.3` directory. Replace 3.5.3 by the version of [**R**](https://cloud.r-project.org/) being installed. This allows us to have multiple versions of [**R**](https: //cloud.r-project.org/) in `/opt/R/`.
+**Note**: The language [**R**](https://cloud.r-project.org/) will be configured and installed in the `/opt/R/3.5.3` directory. Replace 3.5.3 by the version of [**R**](https://cloud.r-project.org/) being installed. This allows us to have multiple versions of [**R**](https://cloud.r-project.org/) in `/opt/R/`.
 
 Most likely the [**OpenBLAS**](https://www.openblas.net/) library will be bound to [**R**](https://cloud.r-project.org/). To check, run  in the [**R**](https://cloud.r-project.org/) the ```sessionInfo()``` code. Something like the output below should appear:
 
