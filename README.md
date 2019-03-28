@@ -71,7 +71,7 @@ We need to link the [**R**](https://cloud.r-project.org/) with the file ```libop
 ```
 cd /usr/local/lib64/R/lib
 sudo mv libRblas.so libRblas.so.keep
-ln -s /opt/OpenBLAS/lib/libopenblas_haswellp-r0.3.5.so libRblas.so
+sudo ln -s /opt/OpenBLAS/lib/libopenblas_haswellp-r0.3.5.so libRblas.so
 ```
 
 Start a section of language [**R**](https://cloud.r-project.org/) and do ```sessionInfo()```. You should note something like:
