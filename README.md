@@ -97,7 +97,7 @@ All steps, for distributions based on Arch Linux, could be summarized in:
 yaourt -S openblas-lapack --noconfirm
 sudo pacman -S r
 ```
-Installing [**R**](https://cloud.r-project.org/) from the form just above is much simpler. However, the advantage of compiling and installing [**R**](https://cloud.r-project.org/) in the `/ opt` directory is that we can have several configured versions of the language.
+Installing [**R**](https://cloud.r-project.org/) from the form just above is much simpler. However, the advantage of compiling and installing [**R**](https://cloud.r-project.org/) in the `/opt` directory is that we can have several configured versions of the language.
 
 
 # Multithreaded processing in R
