@@ -87,7 +87,10 @@ BLAS/LAPACK: /opt/OpenBLAS/lib/libopenblas_haswellp-r0.3.5.so
 sudo ln -sf /opt/R/3.5.3/bin/R /bin/R
 sudo ln -sf /opt/R/3.5.3/bin/R /bin/Rscript 
 ```
-Agora instale o pacote **rstudio-desktop-bin** do repositório AUR. Quando perguntado, edite o arquivo **PKGBUILD** e remova o [**R**](https://cloud.r-project.org/) das dependências. 
+
+Now install the **rstudio-desktop-bin** package from the AUR repository. When prompted, edit the **PKGBUILD** file and remove the [**R**](https://cloud.r-project.org/) from dependencies.
+
+
 
 # For distributions based on Arch Linux
 
