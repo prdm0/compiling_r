@@ -7,7 +7,9 @@
 ## Compiling OpenBLAS
 
 Initially download the [**R**](https://cloud.r-project.org/) and [**OpenBLAS**](https://www.openblas.net/) (**Open** Optimized **BLAS** Library) source codes in [**OpenBLAS**](https://www.openblas.net/). In the file directory, perform the following steps.
+
 ```
+cd $HOME/Downloads
 tar -zxvf OpenBLAS*
 cd OpenBLAs*
 make -j $(nproc)
@@ -16,6 +18,7 @@ sudo make install
 or
 
 ```
+cd $HOME/Downloads
 git clone https://github.com/xianyi/OpenBLAS.git
 cd OpenBLAS*
 git checkout v0.3.5
@@ -30,9 +33,9 @@ sudo make install
 For those who use **C++** codes in [**R**](https://cloud.r-project.org/) using the library [**Rcpp**](http://www.rcpp.org/), configure the [**Armadillo**](http://arma.sourceforge.net/) with the library [**OpenBLAS**](https://www.openblas.net/) be something fruitful.
 
 ```
+cd $HOME/Downloads
 tar -xvf armadillo*
 cd armadillo*
-sudo mkdir /opt/armadillo
 export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
 ./configure -DCMAKE_INSTALL_PREFIX=/opt/armadillo
 cmake . -DCMAKE_INSTALL_PREFIX=/opt/armadillo
