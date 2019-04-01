@@ -34,11 +34,12 @@ tar -xvf armadillo*
 cd armadillo*
 sudo mkdir /opt/armadillo
 export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
-./configure -DCMAKE_PREFIX_PATH=/opt/armadillo
-cmake . -DCMAKE_PREFIX_PATH=/opt/armadillo
+./configure -DCMAKE_INSTALL_PREFIX=/opt/armadillo
+cmake . -DCMAKE_INSTALL_PREFIX=/opt/armadillo
 make -j $(nproc)
 sudo make install
 ```
+
 **Note**: Further details regarding the compilation of the library [**Armadillo**](http://arma.sourceforge.net/) can be found at https://gitlab.com/conradsnicta/armadillo-code.
 
 ## Compiling R with OpenBLAS
