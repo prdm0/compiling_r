@@ -106,7 +106,7 @@ Installing [**R**](https://cloud.r-project.org/) from the form just above is muc
 # Multithreaded processing in R
 
 
-To make use of multithreaded processing, do ```export OPENBLAS_NUM_THREADS=1``` before starting a [**R**](https://cloud.r-project.org/) section.
+To make use of multithreaded processing, do `export OPENBLAS_NUM_THREADS=1` before starting a [**R**](https://cloud.r-project.org/) section.
 
 ```
 export OPENBLAS_NUM_THREADS=1
