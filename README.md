@@ -32,6 +32,7 @@ For those who use **C++** codes in [**R**](https://cloud.r-project.org/) using t
 ```
 tar -xvf armadillo*
 cd armadillo*
+sudo mkdir /opt/armadillo
 export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
 ./configure -DCMAKE_PREFIX_PATH=/opt/OpenBLAS/lib/
 cmake . -DCMAKE_PREFIX_PATH=/opt/OpenBLAS/lib/
