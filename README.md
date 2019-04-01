@@ -89,8 +89,8 @@ BLAS/LAPACK: /opt/OpenBLAS/lib/libopenblas_haswellp-r0.3.5.so
 ## Installing RStudio and binding to compiled R in (Arch Linux)
 
 ```
-sudo ln -sf /opt/R/3.5.3/lib64/R/bin /bin/R
-sudo ln -sf /opt/R/3.5.3/lib64/R/bin /bin/Rscript 
+sudo ln -sf /opt/R/3.5.3/lib64/R/bin/R /bin/R
+sudo ln -sf /opt/R/3.5.3/lib64/R/bin/Rscript /bin/Rscript 
 ```
 
 Now install the **rstudio-desktop-bin** package from the AUR repository. When prompted, edit the **PKGBUILD** file and remove the [**R**](https://cloud.r-project.org/) from dependencies.
