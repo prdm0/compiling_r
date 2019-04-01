@@ -34,8 +34,8 @@ tar -xvf armadillo*
 cd armadillo*
 sudo mkdir /opt/armadillo
 export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
-./configure -DCMAKE_PREFIX_PATH=/opt/OpenBLAS/lib/
-cmake . -DCMAKE_PREFIX_PATH=/opt/OpenBLAS/lib/
+./configure -DCMAKE_PREFIX_PATH=/opt/armadillo
+cmake . -DCMAKE_PREFIX_PATH=/opt/armadillo
 make -j $(nproc)
 sudo make install
 ```
