@@ -2,7 +2,7 @@
 
 **DEPENDENCES**: make, cmake, gcc, gcc-fortran and tk.
 
-**Important**: I'll be at all times assuming that the project [**Julia**](https://julialang.org/) has been cloned into the directory `~/Downloads`. Also, I will consider the `/opt` directory as the installation directory for the [**OpenBLAS**](https://www.openblas.net/) library and of the [**Julia**](https://julialang.org/) language. You can choose a directory of your choice.
+**Important**: I'll be at all times assuming that the project [**R**](https://cloud.r-project.org/) has been cloned into the directory `~/Downloads`. Also, I will consider the `/opt` directory as the installation directory for the [**OpenBLAS**](https://www.openblas.net/) library and of the [**R**](https://cloud.r-project.org/) language. You can choose a directory of your choice.
 
 ## Compiling OpenBLAS
 
