@@ -57,7 +57,7 @@ In the directory where the [**R**](https://cloud.r-project.org/) was downloaded,
 tar -zxvf R*
 cd R-* 
 export LD_LIBRARY_PATH=/opt/OpenBLAS/lib/
-./configure --prefix=/opt/R/3.5.3 --enable-R-shlib --enable-threads=posix --with-blas="-lopenblas -L/opt/OpenBLAS/lib -I/opt/OpenBLAS/include -m64 -lpthread -lm"
+./configure --prefix=/opt/R/3.6.0 --enable-R-shlib --enable-threads=posix --with-blas="-lopenblas -L/opt/OpenBLAS/lib -I/opt/OpenBLAS/include -m64 -lpthread -lm"
 make -j $(nproc)
 sudo make install
 ```
