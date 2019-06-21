@@ -67,7 +67,7 @@ Most likely the [**OpenBLAS**](https://www.openblas.net/) library will be bound 
 
 ```
 Matrix products: default
-BLAS/LAPACK: /opt/OpenBLAS/lib/libopenblas_haswellp-r0.3.5.so
+BLAS/LAPACK: /opt/OpenBLAS/lib/libopenblas_haswellp-r0.3.6.so
 ```
 If linking does not occur, follow the steps outlined in the code below.
 
