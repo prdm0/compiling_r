@@ -21,7 +21,7 @@ or
 cd $HOME/Downloads
 git clone https://github.com/xianyi/OpenBLAS.git
 cd OpenBLAS*
-git checkout v0.3.5
+git checkout v0.3.6
 make -j $(nproc)
 sudo make install
 ```
