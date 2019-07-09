@@ -121,8 +121,24 @@ export OMP_NUM_THREADS=1
 
 **NOTE**: For intel processors,```sudo cpupower frequency-set -g performance```, can boost performance. Read more at https://wiki.archlinux.org/index.php/CPU_frequency_scaling.
 
+# Running R code in bash terminal
 
+The two traditional ways to execute an R code in the bash terminal is by using the codes below:
 
+```
+Rscript code.R
+```
 
+or
 
+```
+R CMD BATCH code.R
+```
 
+Another way to execute the R code is to introduce `#!/usr/bin/env Rscript` in the first line of the file **code.R**. Thus, we can execute the code as follows:
+
+```
+./code.R
+```
+
+**Note**: You must give permission to execute the file **code.R**. So, make `sudo chmod +x code.R`. 
