@@ -11,7 +11,7 @@ Initially download the [**R**](https://cloud.r-project.org/) and [**OpenBLAS**](
 ```
 cd $HOME/Downloads
 tar -zxvf OpenBLAS*
-cd OpenBLAs*
+cd OpenBLAS*
 make -j $(nproc)
 sudo make install
 ```
