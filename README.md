@@ -1,4 +1,4 @@
-# Linking R to the OpenBLAS Library Using the ropenblas package
+# Linking R to the OpenBLAS library using the ropenblas package
 
 ```
 devtools::install_github(repo = "prdm0/ropenblas", force = TRUE)
