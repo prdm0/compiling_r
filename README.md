@@ -1,3 +1,13 @@
+# Linking R to the OpenBLAS Library Using the ropenblas package
+
+```
+devtools::install_github(repo = "prdm0/ropenblas", force = TRUE)
+library(ropenblas)
+ropenblas(x = "0.3.7")
+```
+For more details on the **ropenblas** package, click [**here**](https://prdm0.github.io/ropenblas/). This package performs the binding of [**OpenBLAS**](https://www.openblas.net/) library without the need to follow the steps below.
+
+
 # Instructions for compiling R, OpenBLAS and linking R with OpenBLAS (GNU/Linux)
 
 **DEPENDENCES**: make, cmake, gcc, gcc-fortran and tk.
